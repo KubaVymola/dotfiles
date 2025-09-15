@@ -1,5 +1,5 @@
 theme = catppuccin-mocha
-font-size = 14
+font-size = 16
 cursor-text = #000000
 cursor-style = block_hollow
 window-decoration = true
