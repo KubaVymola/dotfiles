@@ -147,9 +147,6 @@ alias ds="du -hs * .* | sort -h"
 alias sl="ssh-login"
 alias atc="/opt/homebrew/Cellar/bsdgames-osx/2.19.4/bin/atc"
 alias vim="nvim"
-alias n22="sed -i '' 's/\"node\": \"18.16.0\"/\"node\": \"22.2.0\"/g' package.json && nvm use 22.2.0"
-alias n20="sed -i '' 's/\"node\": \"18.16.0\"/\"node\": \"20.10.0\"/g' package.json && nvm use 20.10.0"
-alias n18="sed -i '' 's/\"node\": \"20.10.0\"/\"node\": \"18.16.0\"/g' package.json && nvm use 18.16.0"
 alias lg="lazygit"
 alias editz="vim ~/.zshrc"
 alias rst="exec zsh"
@@ -186,7 +183,7 @@ unsetopt inc_append_history
 unsetopt share_history
 
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh --config '/Users/jakub/.oh-my-posh/themes/tiwahu-v2.omp.json')"
+  eval "$(oh-my-posh init zsh --config "${HOME}/.oh-my-posh/themes/tiwahu-v2.omp.json")"
 fi
 
 
