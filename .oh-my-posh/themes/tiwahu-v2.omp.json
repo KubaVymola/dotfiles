@@ -1,0 +1,213 @@
+{
+  "$schema": "https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/schema.json",
+  "blocks": [
+    {
+      "type": "rprompt",
+      "alignment": "right",
+      "segments": [
+        {
+          "properties": {
+            "branch_icon": "\ue725 ",
+            "cache_duration": "none",
+            "cherry_pick_icon": "\ue29b ",
+            "commit_icon": "\uf417 ",
+            "fetch_status": false,
+            "fetch_upstream_icon": false,
+            "merge_icon": "\ue727 ",
+            "no_commits_icon": "\uf0c3 ",
+            "rebase_icon": "\ue728 ",
+            "revert_icon": "\uf0e2 ",
+            "tag_icon": "\uf412 ",
+            "untracked_modes": {
+              "/Users/user/Projects/oh-my-posh/": "no"
+            }
+          },
+          "template": " {{ .UpstreamIcon }}{{ .HEAD }} {{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}",
+          "foreground": "#f0efe7",
+          "background": "#9f1359",
+          "type": "git",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none",
+            "time_format": "15:04:05"
+          },
+          "foreground": "#0fba81",
+          "type": "time",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "always_enabled": true,
+            "cache_duration": "none"
+          },
+          "trailing_diamond": "\ue0b4",
+          "template": " {{ .Code }} ",
+          "foreground": "#ffffff",
+          "background": "#00897b",
+          "type": "status",
+          "style": "accordion",
+          "background_templates": [
+            "{{ if .Error }}#e91e63{{ end }}"
+          ]
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "style": "austin",
+            "threshold": 0
+          },
+          "template": " {{ .FormattedMs }} ",
+          "foreground": "#222222",
+          "background": "#76a8f9",
+          "type": "executiontime",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " \ue753 {{ .Full }} ",
+          "foreground": "#000000",
+          "background": "#1976d2",
+          "type": "_nx",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " \ue718 {{ .Full }} ",
+          "foreground": "#ffffff",
+          "background": "#6CA35E",
+          "type": "node",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": "\ue71e {{ .Full }} ",
+          "foreground": "#193549",
+          "background": "#ffeb3b",
+          "type": "_npm",
+          "style": "powerline"
+        }
+      ]
+    },
+    {
+      "type": "prompt",
+      "alignment": "left",
+      "segments": [
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " ",
+          "foreground": "#222222",
+          "background": "#ffcc88",
+          "type": "root",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none"
+          },
+          "template": " {{ if .SSHSession }}\ueba9 {{ end }}{{ .UserName }}@{{ .HostName }} ",
+          "foreground": "#888888",
+          "background": "#222222",
+          "type": "session",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "_style": "powerlevel",
+            "cache_duration": "none",
+            "folder_icon": "\uf07b",
+            "home_icon": "\ueb06",
+            "max_depth": 2,
+            "style": "agnoster_short"
+          },
+          "template": " {{ .Path }} ",
+          "foreground": "#cccccc",
+          "background": "#444444",
+          "type": "path",
+          "style": "powerline"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_version": false
+          },
+          "template": " \ue77f ",
+          "foreground": "#ffffff",
+          "background": "#7014eb",
+          "type": "dotnet",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_version": false
+          },
+          "template": " \ue626 ",
+          "foreground": "#ffffff",
+          "background": "#7FD5EA",
+          "type": "go",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_version": false
+          },
+          "template": " \ue235 ",
+          "foreground": "#100e23",
+          "background": "#906cff",
+          "type": "python",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "fetch_version": false
+          },
+          "template": " \ue7a8 ",
+          "foreground": "#193549",
+          "background": "#99908a",
+          "type": "rust",
+          "style": "plain"
+        },
+        {
+          "properties": {
+            "cache_duration": "none",
+            "mapped_shell_names": {
+              "bash": "$",
+              "cmd": ">",
+              "fish": "~>",
+              "lua": ">",
+              "nu": ":)",
+              "pwsh": "❯",
+              "shell": "❯",
+              "zsh": "$"
+            }
+          },
+          "template": " {{ .Name }} ",
+          "foreground": "#007ACC",
+          "type": "shell",
+          "style": "plain"
+        }
+      ],
+      "newline": true
+    }
+  ],
+  "version": 3
+}

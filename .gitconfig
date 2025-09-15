@@ -1,0 +1,56 @@
+[user]
+	name = Jakub Vymola
+	email = kuba.vymola@gmail.com
+[init]
+	defaultBranch = master
+[core]
+	excludesfile = /Users/jakub/.gitignore_global
+	editor = nvim
+[difftool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/p4merge.app/Contents/MacOS/p4merge \"$BASE\" \"$LOCAL\" \"$REMOTE\" \"$MERGED\"
+	trustExitCode = true
+[commit]
+	template = /Users/jakub/.stCommitMsg
+[merge]
+	conflictstyle = diff3
+	tool = p4merge
+[diff]
+	tool = p4merge
+[diff "tool.p4merge"]
+	path = /opt/homebrew/bin/p4merge
+[mergetool "p4merge"]
+	path = /opt/homebrew/bin/p4merge
+[mergetool]
+	keepBackup = false
+[rerere]
+	enabled = true
+[column]
+	ui = auto
+[branch]
+	srot = -committerdate
+[alias]
+    lg = lg1
+    lg1 = lg1-specific --all
+    lg2 = lg2-specific --all
+    lg3 = lg3-specific --all
+
+    lg1-specific = log --graph --abbrev-commit --oneline --decorate --format=format:'%C(green)(%ar)%C(reset) %C(white)%s%C(reset) %C(cyan)- %an%C(reset)%C(auto)%d%C(reset)'
+    lg2-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset)%C(auto)%d%C(reset)%n''          %C(white)%s%C(reset) %C(dim white)- %an%C(reset)'
+    lg3-specific = log --graph --abbrev-commit --decorate --format=format:'%C(bold blue)%h%C(reset) - %C(bold cyan)%aD%C(reset) %C(bold green)(%ar)%C(reset) %C(bold cyan)(committed: %cD)%C(reset) %C(auto)%d%C(reset)%n''          %C(white)%s%C(reset)%n''          %C(dim white)- %an <%ae> %C(reset) %C(dim white)(committer: %cn <%ce>)%C(reset)'
+	ci = !git checkout $(git branch -a | fzf | xargs)
+
+    local-branches = !git branch --format '%(refname:short) %(upstream:short)' | awk '{if (!$2) print $1}'
+
+    qc = !git add -A && git commit --amend --no-edit && git push -f
+
+    co = checkout
+    fa = fetch -ap
+    s = status
+    aa = add -A
+    unstage = reset HEAD --
+
+[pager]
+	branch = false
