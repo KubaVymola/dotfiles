@@ -72,8 +72,6 @@ CASE_SENSITIVE="true"
 # Would you like to use another custom folder than $ZSH/custom?
 # ZSH_CUSTOM=/path/to/new-custom-folder
 
-export NVM_LAZY_LOAD=true
-export NVM_DIR="$HOME/.nvm"
 export EDITOR=nvim
 
 # Which plugins would you like to load?
@@ -209,3 +207,8 @@ builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integrati
 
 
 alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
+
+export NVM_LAZY_LOAD=true
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
