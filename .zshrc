@@ -209,3 +209,5 @@ builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integrati
 
 alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
 
+[[ -f "$HOME/.zshrc-local" ]] && source "$HOME/.zshrc-local"
+
