@@ -79,6 +79,10 @@ export NVM_DIR="$HOME/.nvm"
 
 export EDITOR=nvim
 
+. "$HOME/.atuin/bin/env"
+
+eval "$(atuin init zsh)"
+
 # Which plugins would you like to load?
 # Standard plugins can be found in $ZSH/plugins/
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
@@ -101,6 +105,7 @@ plugins=(
   nx-completion
   zoxide
   pnpm-shell-completion
+  # zsh-atuin
 )
 
 source $ZSH/oh-my-zsh.sh
