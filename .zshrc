@@ -149,7 +149,7 @@ alias o="open"
 alias prev="open -a Preview "
 alias cod="code -n ."
 alias ds="du -hs * .* | sort -h"
-alias sl="ssh-login"
+alias sl="ssh-add"
 alias atc="/opt/homebrew/Cellar/bsdgames-osx/2.19.4/bin/atc"
 alias vim="nvim"
 alias lg="lazygit"
@@ -164,7 +164,6 @@ alias aws_stage='source ~/.config/aws_accounts/stage.sh'
 alias aws_prod='source ~/.config/aws_accounts/prod.sh'
 alias aws_reset='source ~/.config/aws_accounts/reset.sh'
 alias ll="ls -lhAF"
-alias ssh-login="ssh-add ~/.ssh/id_rsa"
 
 if [ -x "$(command -v init_crrr)" ]; then
   source init_crrr
