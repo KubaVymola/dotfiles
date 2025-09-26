@@ -79,6 +79,8 @@ export NVM_DIR="$HOME/.nvm"
 
 export EDITOR=nvim
 
+eval "$(fzf --zsh)"
+
 . "$HOME/.atuin/bin/env"
 
 eval "$(atuin init zsh)"
