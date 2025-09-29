@@ -78,11 +78,13 @@
                     "properties": {
                         "cache_duration": "none"
                     },
-                    "template": " \ue753 {{ .Full }} ",
+                    "template": "\ue753 {{ .Full }}",
                     "foreground": "#000000",
                     "background": "#1976d2",
-                    "type": "_nx",
-                    "style": "powerline"
+                    "type": "nx",
+                    "style": "diamond",
+                    "leading_diamond": " \ue0b6",
+                    "trailing_diamond": "\ue0b4"
                 },
                 {
                     "properties": {
@@ -100,11 +102,52 @@
                     "properties": {
                         "cache_duration": "none"
                     },
-                    "template": "\ue71e {{ .Full }} ",
+                    "template": "\ue71e {{ .Full }}",
+                    "foreground": "#FFFFFF",
+                    "background": "#CB3837",
+                    "type": "npm",
+                    "style": "diamond",
+                    "leading_diamond": " \ue0b6",
+                    "trailing_diamond": "\ue0b4"
+                },
+                {
+                    "properties": {
+                        "cache_duration": "none",
+                        "fetch_version": false
+                    },
+                    "template": "\ue626 {{ .Full }}",
+                    "foreground": "#ffffff",
+                    "background": "#7FD5EA",
+                    "type": "go",
+                    "style": "diamond",
+                    "leading_diamond": " \ue0b6",
+                    "trailing_diamond": "\ue0b4"
+                },
+                {
+                    "properties": {
+                        "cache_duration": "none",
+                        "fetch_version": false
+                    },
+                    "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+                    "foreground": "#100e23",
+                    "background": "#906cff",
+                    "type": "python",
+                    "style": "diamond",
+                    "leading_diamond": " \ue0b6",
+                    "trailing_diamond": "\ue0b4"
+                },
+                {
+                    "properties": {
+                        "cache_duration": "none",
+                        "fetch_version": false
+                    },
+                    "template": "\ue7a8 {{ .Full }}",
                     "foreground": "#193549",
-                    "background": "#ffeb3b",
-                    "type": "_npm",
-                    "style": "powerline"
+                    "background": "#99908a",
+                    "type": "rust",
+                    "style": "diamond",
+                    "leading_diamond": " \ue0b6",
+                    "trailing_diamond": "\ue0b4"
                 }
             ]
         },
@@ -146,50 +189,6 @@
                     "type": "path",
                     "trailing_diamond": "\ue0b4",
                     "style": "diamond"
-                },
-                {
-                    "properties": {
-                        "cache_duration": "none",
-                        "fetch_version": false
-                    },
-                    "template": " \ue77f ",
-                    "foreground": "#ffffff",
-                    "background": "#7014eb",
-                    "type": "dotnet",
-                    "style": "plain"
-                },
-                {
-                    "properties": {
-                        "cache_duration": "none",
-                        "fetch_version": false
-                    },
-                    "template": " \ue626 ",
-                    "foreground": "#ffffff",
-                    "background": "#7FD5EA",
-                    "type": "go",
-                    "style": "plain"
-                },
-                {
-                    "properties": {
-                        "cache_duration": "none",
-                        "fetch_version": false
-                    },
-                    "template": " \ue235 ",
-                    "foreground": "#100e23",
-                    "background": "#906cff",
-                    "type": "python",
-                    "style": "plain"
-                },
-                {
-                    "properties": {
-                        "cache_duration": "none",
-                        "fetch_version": false
-                    },
-                    "template": " \ue7a8 ",
-                    "foreground": "#193549",
-                    "background": "#99908a",
-                    "type": "rust",
-                    "style": "plain"
                 },
                 {
                     "properties": {
