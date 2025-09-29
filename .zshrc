@@ -165,7 +165,16 @@ alias aws_dev='source ~/.config/aws_accounts/dev.sh'
 alias aws_stage='source ~/.config/aws_accounts/stage.sh'
 alias aws_prod='source ~/.config/aws_accounts/prod.sh'
 alias aws_reset='source ~/.config/aws_accounts/reset.sh'
-alias ll="ls -lhAF"
+
+# alias ll="ls -lhAF"
+
+# eza
+alias ls='eza'
+alias l='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first'
+alias ll='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -l --git -h'
+alias la='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a'
+alias lla='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a -l --git -h'
+export EZA_CONFIG_DIR="${HOME}/.config/eza"
 
 if [ -x "$(command -v init_crrr)" ]; then
   source init_crrr
