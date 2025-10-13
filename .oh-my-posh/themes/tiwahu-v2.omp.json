@@ -126,9 +126,9 @@
                 {
                     "properties": {
                         "cache_duration": "none",
-                        "fetch_version": false
+                        "fetch_version": true
                     },
-                    "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ if .Venv }}{{ .Venv }} {{ end }}{{ .Full }}{{ end }}",
+                    "template": "\ue235 {{ if .Error }}{{ .Error }}{{ else }}{{ .Full }} ({{ if .Venv }}{{ .Venv }}{{ end }}){{ end }}",
                     "foreground": "#100e23",
                     "background": "#906cff",
                     "type": "python",
