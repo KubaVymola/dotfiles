@@ -235,3 +235,7 @@ alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
 
 [[ -f "$HOME/.zshrc-local" ]] && source "$HOME/.zshrc-local"
 
+# if [ -z "$TMUX" ]
+# then
+#     tmux attach -t TMUX || tmux new -s TMUX
+# fi
