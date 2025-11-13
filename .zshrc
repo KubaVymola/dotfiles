@@ -239,3 +239,6 @@ alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
 # then
 #     tmux attach -t TMUX || tmux new -s TMUX
 # fi
+#
+
+alias ai="tmux popup \"gemini\""
