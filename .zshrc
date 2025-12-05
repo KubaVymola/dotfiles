@@ -229,7 +229,7 @@ fi
 set -o vi
 bindkey -M viins '^E' autosuggest-accept
 
-builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
+[[ -f "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration" ]] && builtin source "${GHOSTTY_RESOURCES_DIR}/shell-integration/zsh/ghostty-integration"
 
 alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
 
