@@ -166,6 +166,7 @@ alias aws_stage='source ~/.config/aws_accounts/stage.sh'
 alias aws_prod='source ~/.config/aws_accounts/prod.sh'
 alias aws_reset='source ~/.config/aws_accounts/reset.sh'
 alias sql='lazysql'
+alias c='claude'
 
 # alias ll="ls -lhAF"
 
@@ -177,9 +178,9 @@ alias la='eza --color=always --color-scale=all --color-scale-mode=gradient --ico
 alias lla='eza --color=always --color-scale=all --color-scale-mode=gradient --icons=always --group-directories-first -a -l --git -h'
 export EZA_CONFIG_DIR="${HOME}/.config/eza"
 
-if [ -x "$(command -v init_crrr)" ]; then
-  source init_crrr
-fi
+# if [ -x "$(command -v init_crrr)" ]; then
+#   source init_crrr
+# fi
 
 export ITERM2_SQUELCH_MARK=1
 
