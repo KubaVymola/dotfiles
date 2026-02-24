@@ -1,0 +1,14 @@
+- name: tmux
+  prefix: <C-a>
+  keybinds:
+  - name: Split pane horizontally
+    key: s
+  - name: Split pane vertically
+    key: v
+  - name: Create new window
+    key: C
+  - name: Close window
+    key: c
+  - name: Prev, next window
+    key: Shift + {←, →}
+    ignore_prefix: true

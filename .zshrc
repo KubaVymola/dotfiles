@@ -168,6 +168,7 @@ alias aws_reset='source ~/.config/aws_accounts/reset.sh'
 alias sql='lazysql'
 alias cl='claude'
 alias oc='opencode'
+alias keyb='keyb -k ~/.config/keyb'
 
 # alias ll="ls -lhAF"
 
@@ -214,7 +215,7 @@ fi
 # pnpm end
 
 export PATH="/opt/homebrew/Cellar/libpq/17.2/bin:$PATH"
-export PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
 
 # === NNN ===
 # This second option relies on you're terminal using the catppuccin theme and well use true catppuccin colors:
