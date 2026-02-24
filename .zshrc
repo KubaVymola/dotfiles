@@ -243,3 +243,6 @@ alias config='/usr/bin/git --git-dir=${HOME}/.cfg/ --work-tree=${HOME}'
 #
 
 alias ai="tmux popup \"gemini\""
+
+# opencode
+export PATH=/Users/jakub/.opencode/bin:$PATH
