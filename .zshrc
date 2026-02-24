@@ -168,7 +168,7 @@ alias aws_reset='source ~/.config/aws_accounts/reset.sh'
 alias sql='lazysql'
 alias cl='claude'
 alias oc='opencode'
-alias keyb='keyb -k ~/.config/keyb'
+alias keyb='keyb -c ~/.config/keyb/config.yml'
 
 # alias ll="ls -lhAF"
 
