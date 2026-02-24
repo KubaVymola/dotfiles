@@ -166,7 +166,8 @@ alias aws_stage='source ~/.config/aws_accounts/stage.sh'
 alias aws_prod='source ~/.config/aws_accounts/prod.sh'
 alias aws_reset='source ~/.config/aws_accounts/reset.sh'
 alias sql='lazysql'
-alias c='claude'
+alias cl='claude'
+alias oc='opencode'
 
 # alias ll="ls -lhAF"
 
