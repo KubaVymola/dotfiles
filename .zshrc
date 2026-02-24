@@ -1,8 +1,8 @@
 # zmodload zsh/zprof
-
-if [ -n "${ZSH_DEBUGRC+1}" ]; then
-    zmodload zsh/zprof
-fi
+#
+# if [ -n "${ZSH_DEBUGRC+1}" ]; then
+#     zmodload zsh/zprof
+# fi
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
@@ -74,8 +74,8 @@ CASE_SENSITIVE="true"
 
 export NVM_LAZY_LOAD=true
 export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" --no-use
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
 
 export EDITOR=nvim
 
@@ -91,7 +91,7 @@ eval "$(atuin init zsh)"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  zsh-nvm
+  # zsh-nvm
   zsh-autosuggestions
   aws
   git
@@ -225,10 +225,6 @@ export NNN_COLORS="#04020301;4231"
 # Finally Export the set file colors ( Both options require this)
 export NNN_FCOLORS="$BLK$CHR$DIR$EXE$REG$HARDLINK$SYMLINK$MISSING$ORPHAN$FIFO$SOCK$UNKNOWN"
 
-if [ -n "${ZSH_DEBUGRC+1}" ]; then
-    zprof
-fi
-
 set -o vi
 bindkey -M viins '^E' autosuggest-accept
 
@@ -248,3 +244,5 @@ alias ai="tmux popup \"gemini\""
 
 # opencode
 export PATH=/Users/jakub/.opencode/bin:$PATH
+
+# zprof
