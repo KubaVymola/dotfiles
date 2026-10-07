@@ -117,7 +117,8 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-# export LANG=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -169,6 +170,8 @@ alias sql='lazysql'
 alias cl='claude'
 alias oc='opencode'
 alias keyb='keyb -c ~/.config/keyb/config.yml'
+alias rest='posting --collection .posting --env .env'
+alias tmux='tmux -u'
 
 # alias ll="ls -lhAF"
 
@@ -194,7 +197,6 @@ export PATH="$FLYCTL_INSTALL/bin:$PATH"
 
 setopt HIST_IGNORE_ALL_DUPS
 
-eval "$(zoxide init zsh)"
 eval "$(pyenv init -)"
 autoload -Uz compinit && compinit -l
 
@@ -204,15 +206,6 @@ unsetopt share_history
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
   eval "$(oh-my-posh init zsh --config "${HOME}/.oh-my-posh/themes/tiwahu-v2.omp.json")"
 fi
-
-
-# pnpm
-# export PNPM_HOME="/Users/jakub/Library/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
-# pnpm end
 
 export PATH="/opt/homebrew/Cellar/libpq/17.2/bin:$PATH"
 export PATH="$HOME/.local/bin:$HOME/go/bin:$PATH"
@@ -245,4 +238,16 @@ alias ai="tmux popup \"gemini\""
 # opencode
 export PATH=/Users/jakub/.opencode/bin:$PATH
 
+# pnpm
+export PNPM_HOME="/Users/jakub/Library/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end
+#
+
 # zprof
+
+export _ZO_DOCTOR=0
+eval "$(zoxide init zsh)"

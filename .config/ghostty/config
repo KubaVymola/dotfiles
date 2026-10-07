@@ -1,16 +1,16 @@
 theme = Catppuccin Mocha
-font-size = 16
+font-size = 19
 cursor-text = #000000
 cursor-style = block_hollow
 # window-decoration = none
 
 # background-blur-radius = 20
-# background-opacity = 0.7
+# background-opacity = 0.95
 
-font-family = JetBrainsMono Nerd Font
-font-family-bold = JetBrainsMono Nerd Font
-font-family-italic = JetBrainsMono Nerd Font
-font-family-bold-italic = JetBrainsMono Nerd Font
+font-family = "JetBrainsMono NFM"
+font-family-bold = "JetBrainsMono NFM"
+font-family-italic = "JetBrainsMono NFM"
+font-family-bold-italic = "JetBrainsMono NFM"
 font-style = Bold
 font-style-bold = Bold
 
